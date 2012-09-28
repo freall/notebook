@@ -1,6 +1,7 @@
+<title>Freall's NOTEBOOK</title>
 <link href='markdown.css' rel='stylesheet'>
 
-# ## MY NOTE BOOK
+# #Freall's NOTEBOOK
 
 * \[*LTS*\] [Logs](logs.html "log url")
 
