@@ -1,6 +1,6 @@
+<link href='markdown.css' rel='stylesheet'>
 
-<link href="markdown.css" rel="stylesheet"></link> 
-
-# `##` MY NOTE BOOK
+# ## MY NOTE BOOK
 
 * \[*LTS*\] [Logs](logs.html "log url")
+
