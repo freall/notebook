@@ -15,3 +15,7 @@
 2. 以后加上DisQus做评论。
 3. 提交到github上了，notebook项目，gh-pages分支
 4. markdown转换出来的不是完整的HTML，我要加上html，head，title怎么办？
+
+## 2012.10.15
+1. Github出Windows的客户端了，不错
+2. 下载Chrome源码
