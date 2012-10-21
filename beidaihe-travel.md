@@ -40,3 +40,10 @@
 后跟一群人逃票进入到鸽子窝公园，显然有些胆战心惊的。
 
 身子很冷，但是日出很美，虽然时间短暂，但是不虚此行。
+
+<br />
+<br />    
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1698680" async=""></script>
+<!-- UY END -->

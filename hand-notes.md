@@ -16,3 +16,10 @@
 ## 2012.10.21
 * Win8下面的DevCpp经常出现保存或者编译出现界面无响应的情况，只要将浏览类给关掉就好了。
 * Pelles C, 一个**纯c**开发环境，不过看着很舒服，不错。
+
+<br />
+<br />    
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1698680" async=""></script>
+<!-- UY END -->

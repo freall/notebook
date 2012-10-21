@@ -18,3 +18,9 @@
 * 枚举名属于类型，大小写混合，枚举值全部大写，单词以下划线连接。
 * 宏（少用）全部大写，单词以下划线连接。
 
+<br />
+<br />    
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1698680" async=""></script>
+<!-- UY END -->
