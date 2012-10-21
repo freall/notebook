@@ -1,0 +1,60 @@
+<title>
+用Notepad++结合Pandoc编写Markdown
+</title>
+<link href='markdown.css' rel='stylesheet'>
+<h1 id="用notepad结合pandoc编写markdown">用Notepad++结合Pandoc编写Markdown</h1>
+<p><em>2012.10.21</em></p>
+<p>之前一直使用MarkdownPad，一直觉得此软件设计的不错，也确实不错。<br />今天突然发现两点让我非常不爽。</p>
+<ol style="list-style-type: decimal">
+<li>MarkdownPad<em>自动加上Css代码</em>，直接加到每一html文件中，让HTML变得很臃肿，不是很适合我。</li>
+<li>当然，你可以把它禁用掉，就是定义空的自定义css文件，但是声称的html头是：<br /> <code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</code><br />这个让我十分不高兴，虽然这个可以运行。</li>
+</ol>
+<p>费劲周折，终于找到比较合适的一种在Windows下编辑Markdown的方案了。 就是<strong>用Notepad++结合Pandoc的方式</strong>。</p>
+<ol style="list-style-type: decimal">
+<li>Notepad++ 是我非常喜欢的编辑器。</li>
+<li>Pandoc 功能很强大，也很方便。</li>
+<li>Pandoc 转换出来的html很干净，我很喜欢。</li>
+</ol>
+<p>下面简述下方法。</p>
+<ol style="list-style-type: decimal">
+<li>安装 Notepad++。</li>
+<li>安装 Pandoc。</li>
+<li>在 Notepad++ 中点“运行”-&gt;“运行...”。选择到Pandoc安装目录里面的pandoc.exe。</li>
+<li>在命令行后面加上参数：<br /><code>&quot;$(FULL_CURRENT_PATH)&quot; -o &quot;$(CURRENT_DIRECTORY)\$(NAME_PART).html&quot;</code></li>
+<li>保存。</li>
+<li>需要的话可以保存一个快捷键，更方便。</li>
+</ol>
+<p>这样编辑完Markdown文件后，运行这个命令，就会在当前文件相同目录下产生一个同名的html文件了，很方便。</p>
+<hr />
+备注1.Pandoc的简单命令：<br />
+<pre>
+pandoc pandoc  in.tex -o out.doc
+pandoc -f markdown -t html in.txt -o out.html
+</pre>
+
+备注2.Notepad++的变量：<br />
+<pre>
+FULL_CURRENT_PATH
+    the fully qualified path to the current document.
+CURRENT_DIRECTORY
+    The directory the current document resides in.
+FILE_NAME
+    The filename of the document, without the directory.
+NAME_PART
+    The filename without the extension.
+EXT_PART
+    The extension of the current document.
+NPP_DIRECTORY
+    The directory that contains the notepad++.exe executable that is currently running.`
+CURRENT_WORD
+    The currently selected text in the document.
+CURRENT_LINE
+    The current line number that is selected in the document (0 based index, the first line is 0).
+CURRENT_COLUMN
+    The current column the cursor resides in (0 based index, the first position on the line is 0).
+</pre>
+
+
+
+
+
