@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>index.md</title>
+<title>google-cpp-name-guide.md</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 body{
@@ -266,16 +266,26 @@ button::-moz-focus-inner {
 </style>
 </head>
 <body>
-<p><title>Freall's NOTEBOOK</title>
-<link href='markdown.css' rel='stylesheet'></p>
+<p><link href='markdown.css' rel='stylesheet'></p>
 
-<h1>#Freall's NOTEBOOK</h1>
+<p><title>Google C++ 变量命名规范</title></p>
+
+<h1>Google C++ 变量命名规范</h1>
+
+<p><em>2012.10.21</em></p>
+
+<h2>通用命名规则</h2>
 
 <ul>
-<li>[<strong>LTS</strong>] <a href="logs.html" title="log url">Logs</a></li>
-<li>[<strong>游记</strong>] <a href="beidaihe-travel.html" title="北戴河南戴河之行">北戴河南戴河之行</a>@2012.10.7</li>
-<li>[<strong>碎碎念</strong>] <a href="hand-notes.html" title="随手记">随手记</a></li>
-<li>[<strong>程序猿</strong>] <a href="google-cpp-name-guide.html" title="Google C++命名规范">Google C++命名规范</a></li>
+<li>函数命名、变量命名、文件命名应具有描述性，不过度缩写，类型和变量名应该是名词，函数名则是命令性的动词。</li>
+<li>文件名要全部小写，可以包含下划线或者短线。</li>
+<li>类型命名每个单词以大写字母开头，不包含下划线。类型命包括类、结构体、typedef类型定义、枚举。</li>
+<li>变量名一律小写，单词以下划线相连，类的成员变量以下划线结尾（私有成员），结构体成员不用下划线结尾（因为默认都是public）。</li>
+<li>所有编译时常量，无论是局部的、全局的还是类中的，都以k开头，后接单词大小写混合。</li>
+<li>普通函数以答谢字母开头，复合单词首字母大写，没有下划线，存取控制函数跟变量名匹配。</li>
+<li>命名空间的名称全部小写。</li>
+<li>枚举名属于类型，大小写混合，枚举值全部大写，单词以下划线连接。</li>
+<li>宏（少用）全部大写，单词以下划线连接。</li>
 </ul>
 
 </body>
