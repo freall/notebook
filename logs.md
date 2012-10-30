@@ -20,6 +20,10 @@
 1. Github出Windows的客户端了，不错
 2. 下载Chrome源码
 
+## 2012.10.30
+1. MarkdownPad的解释解释器用的是MarkdownSharp（估计）。但是解释结果是有问题的，当两个列表连着的时候结构就会混乱。
+2. 想将MarkdownCPP改成支持wchar_t，暂时以失败告终。
+
 <br />
 <br />    
 <!-- UY BEGIN -->
