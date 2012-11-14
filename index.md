@@ -9,6 +9,7 @@
 * \[**程序猿**] [Google C++命名规范](google-cpp-name-guide.html "Google C++命名规范")
 * \[**Markdown**] [Notepad++结合pandoc编写markdown](Notepad++-with-pandoc-to-write-markdown.html )
 * \[**Markdown**] [学习cpp-markdown](learning-cpp-markdown.html )
+* \[**Git**] [用CopSSH在Windows上搭建Git服务器](git-server-on-windows-with-copssh.html )
 
 <br />
 <br />    

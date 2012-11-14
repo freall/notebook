@@ -1,0 +1,66 @@
+<title>用CopSSH在Windows上搭建Git服务器</title>
+<link href='markdown.css' rel='stylesheet'>
+
+# 用CopSSH在Windows上搭建Git服务器
+
+*2012年11月14日*
+
+一直用Git作源码管理，Linux下面用起来非常方便，但是工作的项目多是
+VS的项目，平台全是Windows，单机使用没问题，但是局域网小组公用问题就来了。
+一直想搭建一个Windows的Git服务器，畏而未行，今天终于搭建成功了。
+
+其实，回头看来，Windows相比Linux主要就是自身不支持ssh协议，
+只要用软件搭建个ssh的服务器来就可以了，Git自带的ssh客户端软件。
+搜索一番后选中CopSSH。此文简要重述过程。
+
+1. 首先安装Git或者CopSSH都行，我的系统先安装的Git，没啥好说的，装呗。
+
+2. 安装CopSSH，本也没什么，我遇到的问题是，安装之后，xp系统登录欢迎页面下
+没有了任何用户。上网搜索后发现是因为系统原使用系统自带的Administrator且无密码
+账户，CopSSH安装时新建了一个管理员账户，于是Administrator就被隐藏了，然CopSSH建
+的那个账户被CopSSH设置为禁止本地登录，而且又是使用欢迎界面登录，须显示用户名供选择
+登录，于是就没有了账户。
+
+解决办法可以有：
+
+    1. 换一个账户。就是再新建一个管理员账户，这样之前账户的设置、文件等比较多的话不推荐。
+    2. 在账户设置里面设置成经典登录，这样输入用户名密码就没关系了。我选这种。
+
+
+3. 安装之后首先激活一个用户，这个用户用于SSH登录，创建Git的Repo等。于是我创建了一个
+git用户，专用于git的repo创建。
+
+4. 安装完成、激活用户之后，要保证ssh后台的服务正常启动了，我就遇到了没有正常启动的问题，
+后面连接会失败。在控制面板、管理工具、服务里面可以看到CopSSH创建的用户运行的一个OpenSSH的
+服务，如果没有启动，手动启动之，设为自动，开启自动启动服务。
+
+5. 服务器建好了，就是客户端连接的问题了。如果用Git连接的话，在Git Bash里面运行`ssh-keygen -t rsa`，
+生成公钥和密钥。然后将公钥内容(一般在Document and setting\Administrator(用户)目录的.ssh下)，拷贝到
+git(CopSSH激活的用户)的主目录里面.ssh下的authorized_keys(一般在ICW(安装路径)\home\git\.ssh下)里面，
+在Linux下配置过ssh无密钥登录的应该都知道。
+    
+6. 复制过去之后，在Git Bash里面运行`ssh git@*.*.*.*`(其中*.*.*.*是服务器ip地址)，就可以连接上了。
+如果连接失败，查看防火墙是否放行22端口和CopSSH的服务是否正常开启。
+
+7. 接下来在git用户主目录里面创建git的repo目录，两种方式：
+
+    * 将git安装目录下git-core里面的相关工具拷到CopSSH的bin目录里面，然后再CopSSH提供的命令行里
+    运行相关命令。
+    * 直接找到git的用户主目录，用git bash创建一个repo。
+
+不管用那种方式，都是运行`git init --bare`这个命令啦。
+
+8. 服务器仓库有了，接下来就在客户端机器上运行`git clone git@*.*.*.*:repo-git`来克隆repo，之后modify,
+commit,add,branch，随意了，push、pull也都可以啦。
+
+9. 每一个要加入开发的机器都要将自己的公钥拷贝到服务器的git用户的authorized_keys文件中，这个是必须的。
+
+总之，今天配置完成了这个，我很兴奋！
+
+<br />
+<br />    
+
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1698680" async=""></script>
+<!-- UY END -->
