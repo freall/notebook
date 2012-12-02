@@ -10,6 +10,8 @@
 * \[**Markdown**] [Notepad++结合pandoc编写markdown](Notepad++-with-pandoc-to-write-markdown.html )
 * \[**Markdown**] [学习cpp-markdown](learning-cpp-markdown.html )
 * \[**Git**] [用CopSSH在Windows上搭建Git服务器](git-server-on-windows-with-copssh.html )
+* \[**python**] [Nginx+Tornado+Supervisord搭建服务器](nginx-tornado-supervisord-server.html )
+
 
 <br />
 <br />    
